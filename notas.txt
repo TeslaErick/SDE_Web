@@ -1,0 +1,11 @@
+crear un nuevo proyecto enlazado a  mysql
+-->rails new SDE_Web -d mysql
+instalar la gema
+-->gem install mysql2
+migrar la base de datos
+-->rake db:create
+correr el servidor
+--> rails s
+--> rails server
+generar sistema de post
+-->rails generate scaffold status nombre:string contenido:text
