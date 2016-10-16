@@ -1,10 +1,15 @@
 class StatusesController < ApplicationController
   before_action :set_status, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /statuses
   # GET /statuses.json
   def index
     @statuses = Status.all
+    respond_to do |format|
+      format.html #index.html.erb
+      format.json { render json: @statuses }
+    end
   end
 
   # GET /statuses/1
